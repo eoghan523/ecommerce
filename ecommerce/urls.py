@@ -20,10 +20,11 @@ from django.shortcuts import render
 
 # Root URL view
 def home(request):
-    return render(request, 'home.html')  # Render a home template
+    return render(request, 'orders/home.html')  # Render a home template
 
 urlpatterns = [
-    path('orders\templates\orders\home.html', home, name='home'),  # Maps the root URL to the home view
+    path('', home, name='home'),  # Maps the root URL to the home view
     path('admin/', admin.site.urls),
     path('orders/', include('orders.urls')),  # Include the orders app URLs
 ]
+
