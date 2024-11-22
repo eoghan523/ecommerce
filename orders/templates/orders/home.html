@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+  
+    <!--  link to the static CSS file -->
+    {% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'orders/style.css' %}">
+
+    
 </head>
 <body>
-    <h1>Welcome to luckys' E-Commerce Emporium</h1>
-    <p><a href="{% url 'order_list' %}">View Orders</a></p>
+
+    <title>Home</title>
+    <div class="home-container">
+        <h1>Welcome to Luckys' E-Commerce Emporium</h1>
+        <p>
+            <a href="{% url 'order_list' %}" class="btn">View Orders</a>
+        </p>
+    </div>
 </body>
 </html>

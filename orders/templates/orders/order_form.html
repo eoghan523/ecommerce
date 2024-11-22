@@ -1,19 +1,23 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
-    <!--Link to Bootstrap -->
+    
+    {% load static %}
+    <!-- Link to CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'orders/style.css' %}">
 </head>
 <body>
+    <title>Order Form</title>
     <div class="container">
         <h1>{% if form.instance.pk %}Edit Order{% else %}Create Order{% endif %}</h1>
         <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Save</button>
+            <div class="form-group">
+                {{ form.as_p }}
+            </div>
+            <button type="submit" class="btn">Save</button>
         </form>
     </div>
 </body>
