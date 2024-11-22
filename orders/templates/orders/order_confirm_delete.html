@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     {% load static %}
     <link rel="stylesheet" href="{% static 'orders/style.css' %}">
   
 </head>
 <body>
+    
       
     <title>Delete Order</title>
 
@@ -17,12 +18,15 @@
     <p>Product: {{ order.product_name }}</p>
     <p>Quantity: {{ order.quantity }}</p>
     <p>Order Date: {{ order.order_date }}</p>
-
+ <!--This displays the customer name, product name, quantity and order date review wheen you click delete-->
     <form method="POST">
+         <!-- Cross-site request forgery (CSRF) token to protect the form against CSRF attacks. -->
         {% csrf_token %}
+        !-- Button to confirm deletion of the order -->
         <button type="submit">Yes, delete it</button>
     </form>
 
+    <!-- Link to back out to the order list without deleting -->
     <a href="{% url 'order_list' %}">Cancel</a>
 </body>
 </html>

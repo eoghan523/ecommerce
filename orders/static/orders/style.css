@@ -20,6 +20,7 @@ body {
     background-color: #081547;  
 }
 
+
 /* Container that holds everything */
 .container {
     max-width: 1200px;
@@ -165,7 +166,7 @@ tr:hover {
 .delete-container h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #0a0909; /* Red color to indicate the delete action */
+    color: #0a0909; 
 }
 
 .delete-container p {
@@ -193,7 +194,7 @@ tr:hover {
     display: inline-block;
     margin-top: 15px;
     text-decoration: none;
-    color: #3498db; /* Blue color for the cancel link */
+    color: #3498db; 
     font-size: 1rem;
 }
 
